@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZPAD — every coin paid in Zcash</title>
+  <meta name="description" content="ZPAD is a Solana launchpad where every coin is quoted in ZEC and every holder is paid in ZEC. Fees also buy and burn $ZPAD.">
+  <meta property="og:title" content="ZPAD — every coin paid in Zcash">
+  <meta property="og:description" content="Launch a coin on ZPAD and its holders earn ZEC from every trade.">
+  <meta property="og:image" content="assets/social-1200x630.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon-64.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top" aria-label="ZPAD home">
+      <img src="assets/logo-256.webp" alt="" width="36" height="36">
+      <span>ZPAD</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#fees">Fees</a>
+      <a href="#rules">Rules</a>
+      <a href="#verify">Verify</a>
+    </nav>
+    <div class="top-actions">
+      <a class="btn btn-ghost" data-link="x" href="#" target="_blank" rel="noopener">X</a>
+      <a class="btn btn-solid" data-launch-cta href="#launch">Launch a coin</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="hero-kicker">A Solana launchpad quoted in Zcash</p>
+        <h1>Every coin paid in Zcash.</h1>
+        <p class="hero-sub">Launch a coin on ZPAD and its holders earn ZEC from every trade. Fees also buy and burn $ZPAD. No dev allocation, no block-zero buys, LP burned.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-solid btn-lg" data-launch-cta href="#launch">Launch a coin</a>
+          <a class="btn btn-ghost btn-lg" href="#rules">Read the rules</a>
+        </div>
+
+        <div class="ca" id="ca-block" data-state="launching">
+          <div class="ca-launching">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="ca-label">$ZPAD launches</span>
+            <time class="ca-time" id="launch-time"></time>
+            <span class="ca-count" id="countdown" aria-live="polite"></span>
+          </div>
+          <div class="ca-live">
+            <span class="ca-label">$ZPAD contract</span>
+            <code id="ca-text"></code>
+            <button class="btn btn-mini" id="copy-ca" type="button">Copy</button>
+            <a class="btn btn-mini" id="buy-link" href="#" target="_blank" rel="noopener">Buy</a>
+            <a class="btn btn-mini" id="chart-link" href="#" target="_blank" rel="noopener">Chart</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <img src="assets/hero-z.webp" alt="" width="900" height="900">
+      </div>
+    </section>
+
+    <section class="ledger" aria-label="Live numbers">
+      <div class="stat"><span class="stat-n" data-stat="zecPaid">—</span><span class="stat-l">ZEC paid to holders</span></div>
+      <div class="stat"><span class="stat-n" data-stat="zpadBurned">—</span><span class="stat-l">$ZPAD burned</span></div>
+      <div class="stat"><span class="stat-n" data-stat="coinsLaunched">—</span><span class="stat-l">Coins launched</span></div>
+      <div class="stat"><span class="stat-n" data-stat="tradingAfter24h">—</span><span class="stat-l">Still trading after 24h</span></div>
+      <p class="ledger-note" id="ledger-note">Counters go live at launch. Every payout and burn is a public transaction.</p>
+    </section>
+
+    <section class="why" id="why">
+      <h2>Why Zcash, why now</h2>
+      <div class="why-grid">
+        <p>Coins quoted in ZEC already lead the asset-paired boards on Solana. ZPAD makes that the default: every coin on it is paired with ZEC, and the trading fees are paid back to holders in ZEC instead of a token you have to sell.</p>
+        <p>Zcash's NU7 network upgrade activates on <strong>November 5, 2026</strong>, with faster blocks and roughly three times the payment speed. ZPAD opens the day before. <a data-link="zcashNU7" href="#" target="_blank" rel="noopener">Read about NU7</a></p>
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <h2>How a coin runs on ZPAD</h2>
+      <ol class="steps">
+        <li>
+          <h3>Launch blind</h3>
+          <p>Pay the launch fee, pick a ticker. The pool is created a few seconds later with a mint nobody has seen, so nobody can buy block zero.</p>
+        </li>
+        <li>
+          <h3>Trade in ZEC</h3>
+          <p>Your coin is quoted in ZEC from the first trade. Buyers come in with ZEC, which is what they want to be paid in.</p>
+        </li>
+        <li>
+          <h3>Holders get paid</h3>
+          <p>Half of every fee goes back to the coin's holders in ZEC, every few minutes, in proportion to what they hold. Sell before a payout and that payout goes to the holders who stayed.</p>
+        </li>
+        <li>
+          <h3>Fees burn $ZPAD</h3>
+          <p>A third of every fee buys $ZPAD on the open market and burns it. Small buys, on a schedule, never more than a 1% price move.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="fees" id="fees">
+      <h2>Where every fee goes</h2>
+      <p class="fees-sub">1% on every trade. The split, in order, from the first coin onward.</p>
+      <div class="bar" id="fee-bar" role="img" aria-label="Fee split"></div>
+      <ul class="bar-legend" id="fee-legend"></ul>
+      <p class="fees-note">$ZPAD's own trading fees are 100% buy-and-burn. Nothing from $ZPAD goes to the team wallet.</p>
+    </section>
+
+    <section class="launch" id="launch">
+      <h2>Launch on ZPAD</h2>
+      <div class="launch-card">
+        <p id="launch-copy">The launch page opens with $ZPAD. One free launch per ticker; reusing a ticker costs 1 SOL. No dev allocation, no initial buy.</p>
+        <a class="btn btn-solid" id="app-link" href="#" data-link="app">Open the launch page</a>
+      </div>
+    </section>
+
+    <section class="rules" id="rules">
+      <h2>Rules, in plain words</h2>
+      <dl class="rules-list">
+        <div><dt>Supply</dt><dd>1,000,000,000 $ZPAD. Mint and freeze authority disabled.</dd></div>
+        <div><dt>Team</dt><dd>0% allocation. No initial buy. One deployer wallet, listed below.</dd></div>
+        <div><dt>Liquidity</dt><dd>Graduates to a Raydium pool. LP tokens burned.</dd></div>
+        <div><dt>Transfer fee</dt><dd>1% on $ZPAD transfers funds the holder payouts for coins launched on ZPAD.</dd></div>
+        <div><dt>Tickers</dt><dd>1–10 letters or numbers. First launch of a ticker is free; reuse costs 1 SOL. Ticker, name and launch post lock for 3 days.</dd></div>
+        <div><dt>Payouts</dt><dd>Paid in ZEC every few minutes. Amounts under $0.50 roll over to the next payout.</dd></div>
+        <div><dt>Audit</dt><dd>Not audited. Upgrade authority is held by the deployer and moves to a multisig after launch.</dd></div>
+      </dl>
+    </section>
+
+    <section class="verify" id="verify">
+      <h2>Verify every wallet</h2>
+      <p>Everything that moves ZEC or $ZPAD runs from these addresses. Check them on Solscan before you trust a counter.</p>
+      <ul class="verify-list" id="verify-list"></ul>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-links">
+      <a data-link="x" href="#" target="_blank" rel="noopener">X</a>
+      <a data-link="telegram" href="#" target="_blank" rel="noopener">Telegram</a>
+      <a data-link="docs" href="#rules">Docs</a>
+    </div>
+    <p class="foot-disclaimer">ZPAD is an independent Solana launchpad. Not affiliated with Zcash, Electric Coin Co or the Zcash Foundation. Not audited. Tokens launched here can go to zero. Nothing on this page is financial advice.</p>
+    <p class="foot-copy">© 2026 ZPAD</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
