@@ -1,17 +1,17 @@
 // ZPAD site config — edit this file only. Everything on the page reads from here.
 window.ZPAD_CONFIG = {
   // Contract address of $ZPAD. Leave empty ("") until launch: the page shows a "launching" state.
-  contractAddress: "",
+  contractAddress: "3QKr2nU23cNfad3JwiXebDKon83EedpETrSDZ6DSpump",
 
   // Which launchpad the token launched on. "raydium" (LaunchLab) or "pumpfun".
-  launchpad: "raydium",
+  launchpad: "pumpfun",
 
   // Launch time shown in the launching state (ISO 8601, UTC). Leave "" to hide the countdown.
   launchTimeUtc: "2026-11-04T15:00:00Z",
 
   // Social and product links. Leave "" to hide a link.
   links: {
-    x: "https://x.com/zpadfun",
+    x: "https://x.com/zpaddevfun",
     telegram: "",
     docs: "#rules",
     app: "",            // e.g. "https://app.zpad.fun" once the launch page is live
